@@ -12,13 +12,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class IndexServlet
  */
 @WebServlet("/set")
-public class IndexServlet extends HttpServlet {
+public class SessionSetterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public IndexServlet() {
+    public SessionSetterServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,7 +31,7 @@ public class IndexServlet extends HttpServlet {
         String gear = System.getenv("OPENSHIFT_GEAR_UUID");
         System.out.println("OPENSHIFT_GEAR_UUID :  " + gear);
         request.getSession().setAttribute("gear", gear);
-        response.sendRedirect("/index.jsp");
+        response.sendRedirect("/");
     }
 
 }

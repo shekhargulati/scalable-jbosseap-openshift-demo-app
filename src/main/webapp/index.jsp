@@ -6,8 +6,7 @@
 
 	<h2>Attribute "gear" is set in the HttpSession</h2>
 	<h4>session.getAttribute("gear") = <%=session.getAttribute("gear")%></h4>
-	<BR> Session Id = <%=session.getId()%>
-	<BR>
+	<br> Session Id = <%=session.getId()%><br>
 	
 </body>
 </html>
