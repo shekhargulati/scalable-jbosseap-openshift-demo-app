@@ -1,6 +1,7 @@
 package com.scaledapp.servlets;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +28,9 @@ public class IndexServlet extends HttpServlet {
      *      response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getSession().setAttribute("gear", System.getenv("OPENSHIFT_GEAR_UUID"));
+        String gear = System.getenv("OPENSHIFT_GEAR_UUID");
+        System.out.println("OPENSHIFT_GEAR_UUID :  " + gear);
+        request.getSession().setAttribute("gear", gear);
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 
