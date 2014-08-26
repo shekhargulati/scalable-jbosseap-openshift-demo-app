@@ -4,7 +4,12 @@ This is a very simple application that shows how session replication works on JB
 
 Start by creating a scalable application.
 ```
-$ rhc create-app scalableapp jbosseap --from-code https://github.com/shekhargulati/scalable-jbosseap-openshift-demo-app.git
+$ rhc create-app scalableapp jbosseap -s --from-code https://github.com/shekhargulati/scalable-jbosseap-openshift-demo-app.git
+```
+
+Change to the application directory
+```
+cd scalableapp
 ```
 
 Set the minimum number of instances of JBoss EAP. This would help us see multiple JBoss EAP instance in action.
